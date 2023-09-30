@@ -16,5 +16,10 @@ namespace SistemaCadastroDeContatos.Repository
             _context.SaveChanges();
             return contato;
         }
+
+        public List<ContatoModel> BuscarTodos()
+        {
+            return _context.Contatos.ToList();
+        }
     }
 }

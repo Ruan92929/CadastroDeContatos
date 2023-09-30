@@ -14,7 +14,8 @@ namespace SistemaCadastroDeContatos.Controllers
 
         public IActionResult Index()
         {
-            return View();
+            List<ContatoModel> contato = _contactRepository.BuscarTodos();
+            return View(contato);
         }
         public IActionResult Criar()
         {
